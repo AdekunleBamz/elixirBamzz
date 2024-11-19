@@ -19,14 +19,16 @@ ICON_EXIT="🚪"
 
 # ASCII Art Header
 display_ascii() {
-    echo -e "    ${RED}    ____  __ __    _   ______  ____  ___________${RESET}"
-    echo -e "    ${GREEN}   / __ \\/ //_/   / | / / __ \\/ __ \\/ ____/ ___/${RESET}"
-    echo -e "    ${BLUE}  / / / / ,<     /  |/ / / / / / / / __/  \\__ \\ ${RESET}"
-    echo -e "    ${YELLOW} / /_/ / /| |   / /|  / /_/ / /_/ / /___ ___/ / ${RESET}"
-    echo -e "    ${MAGENTA}/_____/_/ |_|  /_/ |_/\____/_____/_____//____/  ${RESET}"
-    echo -e "    ${MAGENTA}${ICON_TELEGRAM} Follow us on Telegram: https://t.me/dknodes${RESET}"
-    echo -e "    ${MAGENTA}📢 Follow us on Twitter: https://x.com/dknodes${RESET}"
+    echo -e "    ${RED}██████╗  █████╗ ███╗   ███╗███████╗███████╗ ${RESET}"
+    echo -e "    ${GREEN}██╔══██╗██╔══██╗████╗ ████║██╔════╝██╔════╝ ${RESET}"
+    echo -e "    ${BLUE}██████╔╝███████║██╔████╔██║█████╗  █████╗   ${RESET}"
+    echo -e "    ${CYAN}██╔═══╝ ██╔══██║██║╚██╔╝██║██╔══╝  ██╔══╝   ${RESET}"
+    echo -e "    ${MAGENTA}██║     ██║  ██║██║ ╚═╝ ██║███████╗███████╗ ${RESET}"
+    echo -e "    ${YELLOW}╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝ ${RESET}"
+    echo -e "    ${MAGENTA}${ICON_TELEGRAM} Follow us on Telegram: https://t.me/bamzz_bamzz${RESET}"
+    echo -e "    ${YELLOW}📢 Follow us on Twitter: https://x.com/HRH_Mckay${RESET}"
 }
+
 
 # Menu Borders
 draw_top_border() {
@@ -73,7 +75,7 @@ install_nodes() {
     # read -p "Press Enter to continue..."
 
     # Create .env file
-    ENV_DIR="$HOME/elixirDK"
+    ENV_DIR="$HOME/elixirBamzz"
     ENV_FILE="$ENV_DIR/.env"
 
     echo -e "${YELLOW}Please enter your configuration:${RESET}"
@@ -202,7 +204,7 @@ handle_view_logs() {
 }
 
 handle_view_config() {
-    ENV_FILE="$HOME/elixirDK/.env"
+    ENV_FILE="$HOME/elixirBamzz/.env"
     if [ -f "$ENV_FILE" ]; then
         echo -e "${CYAN}Configuration File:${RESET}"
         cat "$ENV_FILE"
@@ -246,7 +248,7 @@ while true; do
         5) handle_view_logs "elixir-testnet" ;;
         6) handle_view_logs "elixir-mainnet" ;;
         7) handle_view_config ;;
-        8) nano "$HOME/elixirDK/.env" ;;
+        8) nano "$HOME/elixirBamzz/.env" ;;
         0) echo -e "${GREEN}Exiting...${RESET}" && exit 0 ;;
         *) echo -e "${RED}Invalid choice, please try again.${RESET}" ;;
     esac
